@@ -20,7 +20,7 @@ onMounted(() => {
     <ul class="goods-list">
       <li v-for="item in hotList" :key="item.id">
         <RouterLink to="/">
-          <img :src="item.picture" alt="" />
+          <img v-img-lazy="item.picture" alt="" />
           <p class="name">{{ item.title }}</p>
           <p class="price">{{ item.alt }}</p>
         </RouterLink>
@@ -43,7 +43,7 @@ onMounted(() => {
     background: #f0f9f4;
     transition: all .5s;
 
-    &:hover { 
+    &:hover {
       transform: translate3d(0, -3px, 0);
       box-shadow: 0 3px 8px rgb(0 0 0 / 20%);
     }
