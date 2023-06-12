@@ -10,7 +10,7 @@ const getBanner = async () => {
 }
 
 onMounted(() => {
-  getBanner()  
+  getBanner()
 })
 
 </script>
